@@ -97,11 +97,16 @@ header {visibility:hidden;}
 
 # -----------------------------
 # LOAD MODEL
-# -----------------------------
-model = joblib.load("models/logistic_model.pkl")
-scaler = joblib.load("models/scaler.pkl")
-encoders = joblib.load("models/label_encoders.pkl")
-selected_features = joblib.load("models/selected_features.pkl")
+import streamlit as st
+import joblib
+
+# --------------------------------------------------
+# LOAD MODEL
+# --------------------------------------------------
+model = joblib.load("logistic_model.pkl")
+scaler = joblib.load("scaler.pkl")
+encoders = joblib.load("label_encoders.pkl")
+selected_features = joblib.load("selected_features.pkl")
 
 # -----------------------------
 # SIDEBAR
