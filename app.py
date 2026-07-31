@@ -61,11 +61,11 @@ st.markdown("""
 
 # ------------------- LOAD MODEL -------------------
 MODEL_PATH = "model.pkl"
+import joblib
 
 @st.cache_resource
 def load_model():
-    with open("logistic_model.pkl", "rb") as file:
-        return pickle.load(file)
+    return joblib.load("logistic_model.pkl")
 
 model = load_model()
 
