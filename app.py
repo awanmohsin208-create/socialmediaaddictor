@@ -64,7 +64,7 @@ MODEL_PATH = "model.pkl"
 
 @st.cache_resource
 def load_model():
-    with open(MODEL_PATH, "rb") as file:
+    with open("logistic_model.pkl", "rb") as file:
         return pickle.load(file)
 
 model = load_model()
